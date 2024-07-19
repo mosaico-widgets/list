@@ -4,16 +4,17 @@ from mosaico import widget, config
 text = widget.createText()
 text.setText(config["name"])
 text.setHexColor(config["color"])
-text.translate(2,2)
-text.setFontHeight(10)
+text.moveTo(3,0)
+text.setFont("9x18")
 
 # Create items
 items = []
 for i in range(0, len(config["items"])):
     items.append(widget.createText())
-    items[i].setFontHeight(6)
+    items[i].setFont("6x12")
     items[i].setText(config["items"][i])
-    items[i].translate(2, 6+ 7 * (i + 1))
+    items[i].moveTo(4,12)    
+    items[i].translateYBy((i*6)+2)
 
 def loop():
     pass
