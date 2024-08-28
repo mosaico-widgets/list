@@ -9,12 +9,21 @@ text.setFont("9x18")
 
 # Create items
 items = []
+bullets = []
 for i in range(0, len(config["items"])):
+    # Create bullet
+    bullets.append(widget.createRectangle())
+    bullets[i].setSize(2,2)        
+    bullets[i].moveTo(4,14)
+    bullets[i].translateYBy((i*7) + 5)    
+    bullets[i].setHexColor(config["color"])  
+    
+    # Create entry  
     items.append(widget.createText())
-    items[i].setFont("6x12")
+    items[i].setFont("4x6")
     items[i].setText(config["items"][i])
-    items[i].moveTo(4,12)    
-    items[i].translateYBy((i*6)+2)
+    items[i].moveTo(8,12)    
+    items[i].translateYBy((i*7) + 5)
 
 def loop():
     pass
