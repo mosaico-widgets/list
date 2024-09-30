@@ -1,7 +1,7 @@
 {
   "form": {
-    "title": "Shopping List",
-    "description": "Configure your widget here",
+    "title": "Simple List",
+    "description": "Use this form to create a shopping list, todo list etc.",
     "fields": [
       {
         "name": {
